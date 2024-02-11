@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card lavenderblush">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Add Meeting</h2>
+                    </div>
+                    <div class="col-md-6" style="text-align:right;">
+                        <a routerLink="/clientmeetings">View</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body thistle">
+                <form #regTask="ngForm" (ngSubmit)="regTask.valid && Meetadd()" novalidate>
+                    <div class="form-group">
+                        <label for="taskid">Meeting Id</label>
+                        <input type="text" [(ngModel)]="clientmeeting.id" name="taskid" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="taskname">Meeting Topic</label>
+                        <input type="text" [(ngModel)]="clientmeeting.meetingtopic" name="taskname" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="taskdescription">No. of Persons</label>
+                        <input type="text" [(ngModel)]="clientmeeting.no_of_persons" name="taskdescription" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="startDateTime">Start Date & Time:</label>
+                        <input type="datetime-local" [(ngModel)]="clientmeeting.startdatetime" class="form-control" id="startDateTime" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="clientName">Client Name</label>
+                        <select class="form-control" [(ngModel)]="clientmeeting.clientid" id="clientName" required>
+                            <option *ngFor="let client of clients" [value]="client.id">{{client.clientname}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <input type="text" [(ngModel)]="clientmeeting.status" name="status" class="form-control" required />
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success">Add Meeting</button>
+                    <div *ngIf="!regTask.valid" color="black">All fields are mandatory</div>
+                    
+                </form>
+                <div [innerHTML]="msg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

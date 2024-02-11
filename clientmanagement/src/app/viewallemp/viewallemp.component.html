@@ -1,0 +1,50 @@
+
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header bg-light text-dark d-flex justify-content-between align-items-center"><!-- Utilized flexbox utilities -->
+                    <div>
+                        <h3>All Clients Info</h3>
+                    </div>
+                    <div>
+                        <a routerLink="/addemp" class="btn btn-outline-success">New Client</a> <!-- Moved button to the right end corner -->
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Client ID</th>
+                                    <th>Client Name</th>
+                                    <th>Address</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let client of allClients">
+                                    <td>{{client.id}}</td>
+                                    <td>{{client.clientname}}</td>
+                                    <td>{{client.address}}</td>
+                                    <td>{{client.email}}</td>
+                                    <td>{{client.password}}</td>
+                                    <td>
+                                        <button class="btn btn-outline-info" (click)="getOneClientPage(client.id)">View Client Info</button>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <button class="btn btn-outline-success" (click)="getModClientPage(client.id)">Modify</button>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <button class="btn btn-outline-danger" (click)="delClient(client.id)">Remove Client</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

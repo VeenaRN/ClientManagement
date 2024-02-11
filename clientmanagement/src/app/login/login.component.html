@@ -1,0 +1,32 @@
+<div class="container-fluid login-container d-flex justify-content-center align-items-center">
+    <div class="card login-card" style="width: 500px;">
+        <div class="card-header">
+            <h5 class="mb-0">Login Here</h5>
+        </div>
+        <div class="card-body">
+            <form #frmLogin="ngForm" (ngSubmit)="UserCheck(frmLogin)">
+                <div class="form-group">
+                    <label for="usrname">Username</label>
+                    <input type="text" [(ngModel)]="username" name="usrname" 
+                    placeholder="User name" class="form-control" #uname="ngModel" required />
+                    <div class="error" *ngIf="uname.touched && uname.invalid">
+                        Username should not be blank
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pswrd">Password</label>
+                    <input type="password" [(ngModel)]="password" 
+                    placeholder="Password" class="form-control" 
+                    name="pswrd" #pwd="ngModel" required />
+                    <div class="error" *ngIf="pwd.touched && pwd.invalid">
+                        Password should not be blank
+                    </div>
+                </div>
+<br>
+                <button type="submit" class="btn btn-success btn-block">Login</button>
+                <div [innerHTML]="msg" class="error-msg"></div>
+            </form>
+        </div>
+    </div>
+</div>

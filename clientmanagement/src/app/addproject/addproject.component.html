@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card lavenderblush"> 
+            <div class="card-header bg-light d-flex justify-content-between align-items-center"> 
+                <div>
+                    <h3>New Project</h3> 
+                </div>
+                <div>
+                    <a routerLink="/viewall" class="btn btn-outline-primary">Back</a>
+                </div>
+            </div>
+            <div class="card-body thistle"> 
+                <form #regproject="ngForm" (ngSubmit)="regproject.valid && Projectsaving()" novalidate>
+                    <div class="form-group">
+                        <label for="empid">Project ID</label>
+                        <input type="text" [(ngModel)]="projects.id" name="empid" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="empName">Project Name</label>
+                        <input type="text" [(ngModel)]="projects.projectname" name="empName" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="empJob">Duration</label>
+                        <input type="text" [(ngModel)]="projects.duration" name="empJob" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="empSal">Client Id</label>
+                        <input type="text" [(ngModel)]="projects.clientid" name="empSal" class="form-control" required/><br>
+                    </div>
+                    <input type="submit" value="Register" class="btn btn-success"/>
+                    <div *ngIf="!regproject.valid" color="black">All fields are mandatory</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

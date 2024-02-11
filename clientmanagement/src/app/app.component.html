@@ -1,0 +1,43 @@
+<br>
+<div class="navbar-container">
+  <div *ngIf="navbar1" class="nav-list">
+    <a routerLink="/" class="nav-link">Home</a>
+    <a routerLink="addemp" class="nav-link">Clients</a>
+    <a routerLink="projects" class="nav-link">Projects</a>
+    <a routerLink="tasks" class="nav-link">Tasks</a>
+    <a routerLink="clientmeetings" class="nav-link">Meetings</a>
+    <div class="logout-button" >
+      <a routerLink="login" class="nav-link">Logout</a>
+     
+    </div>
+    &nbsp;&nbsp;&nbsp;
+  </div>
+</div>
+
+<div *ngIf="navbar2">
+<table width="100%">
+  <tr style="text-align: center;">
+    <th>
+      <a routerLink="#"></a>
+    </th>
+    <th>
+      <a routerLink="#"></a>
+    </th>
+    <th>
+      <a routerLink="#"></a>
+    </th>
+    <th>
+      <a routerLink="#"></a>
+    </th>
+    <th>
+      <a routerLink="#"></a>
+    </th>
+
+    <th>
+      <a routerLink="#"></a>
+    </th>
+  </tr>
+</table>
+</div>
+
+<router-outlet></router-outlet>

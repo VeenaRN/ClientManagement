@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Modify Client</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                        <a routerLink="/viewall">Back</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <form #modClient="ngForm" (ngSubmit)="updateClient()" >
+                <label>Client ID </label>
+                <input type="text"  [(ngModel)]="clients.id" name= "empid" class="form-control" disabled/>
+                <label>Client Name </label>
+                <input type="text"  [(ngModel)]="clients.clientname" name="empName" class="form-control" />
+                <label>Address</label>
+                <input type="text"  [(ngModel)]="clients.address" name = "empJob" class="form-control" />
+                <label>Email</label>
+                <input type="text"  [(ngModel)]="clients.email" name = "empSal" class="form-control" />
+                <label>Password</label>
+                <input type="email"  [(ngModel)]="clients.password" name = "empEmail" class="form-control" />
+                
+                <br />
+                <input type="submit"  value="Update Client" class="btn btn-success" />
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+  

@@ -1,0 +1,124 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "clientname": "ABC Construction Co.",
+      "address": "123 Main Street, Udupi, Karnataka, 12345",
+      "email": "abcconstruction@gmail.com",
+      "password": "AB@123"
+    },
+    {
+      "id": "2",
+      "clientname": "XYZ Architecture Group",
+      "address": " 456 Royal Avenue, Townsville, Mangalore ,12345",
+      "email": "xyzarchitecture@gmail.com",
+      "password": "XY@123"
+    },
+    {
+      "id": "3",
+      "clientname": "Smith & Associates",
+      "address": "789  Lane, Villageton, Karnataka, 12345",
+      "email": "smithassociates@gmail.com",
+      "password": "SM@123"
+    },
+    {
+      "id": "4",
+      "clientname": "johnson Builders Inc.",
+      "address": "101 MG Road, Hamletsville, State, 34567",
+      "email": "johnbuilders@gmail.com",
+      "password": "JB@123"
+    }
+  ],
+  "projects": [
+    {
+      "id": "101",
+      "projectname": "Residential Complex Renovation",
+      "duration": "6 months",
+      "clientid": 1
+    },
+    {
+      "id": "102",
+      "projectname": "Commercial Office Building Design",
+      "duration": "12 months",
+      "clientid": 2
+    },
+    {
+      "id": "103",
+      "projectname": "Industrial Warehouse Expansion",
+      "duration": "1 month",
+      "clientid": "4"
+    },
+    {
+      "id": "104",
+      "projectname": "Public Park Redevelopment",
+      "duration": "12 months",
+      "clientid": "3"
+    }
+  ],
+  "Proj_tasks": [
+    {
+      "id": "201",
+      "taskname": "Site Survey",
+      "taskDescription": "Conduct a thorough survey of the project site to assess conditions",
+      "projectid": 101
+    },
+    {
+      "id": "202",
+      "taskname": "Conceptual Design",
+      "taskDescription": "Develop initial design concepts based on client requirements and site conditions",
+      "projectid": 102
+    },
+    {
+      "id": "203",
+      "taskname": "Structural Analysis",
+      "taskDescription": "Perform structural analysis to ensure design integrity and compliance with building codes",
+      "projectid": 103
+    },
+    {
+      "id": "204",
+      "taskname": "Construction Documentation",
+      "taskDescription": "Prepare detailed construction documents including plans, sections, and specificationse",
+      "projectid": "104"
+    },
+    {
+      "id": "205",
+      "taskname": "Quality Assurance Inspection",
+      "taskDescription": "Conduct a thorough inspection of completed work to ensure adherence to quality standards.",
+      "projectid": 0
+    }
+  ],
+  "clientmeetings": [
+    {
+      "id": "301",
+      "meetingtopic": "Initial Project Meeting",
+      "no_of_persons": 10,
+      "startdatetime": "2024-02-09 T17:28:31.24",
+      "clientid": 2,
+      "status": "Scheduled"
+    },
+    {
+      "id": "302",
+      "meetingtopic": "Progress Review Meeting",
+      "no_of_persons": 8,
+      "startdatetime": "2024-03-10T10:30:00",
+      "clientid": 1,
+      "status": "pending"
+    },
+    {
+      "id": "303",
+      "meetingtopic": "Design Presentation",
+      "no_of_persons": "6",
+      "startdatetime": "2024-02-09T17:28:31.241Z",
+      "clientid": 3,
+      "status": "Completed"
+    },
+    {
+      "id": "304",
+      "meetingtopic": "Budget Discussion",
+      "no_of_persons": "5",
+      "startdatetime": "2024-02-15T17:28:31.241Z",
+      "clientid": 4,
+      "status": "Scheduled"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+.card {
+    background-color: thistle;  
+}
+
+.card .card-body form {
+    background-color:lavenderblush;
+    color: black;
+}

@@ -1,0 +1,47 @@
+<br>
+ <div class="container-fluid" style="background-color:aliceblue; padding-top: 20px;">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Scheduled Meetings Info</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Meeting ID</th>
+                                <th>Meeting Topic</th>
+                                <th>No of Persons</th>
+                                <th>Start Date & Time</th>
+                                <th>Client ID</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let meeting of allClientmeetings">
+                                <td>{{ meeting.id }}</td>
+                                <td>{{ meeting.meetingtopic }}</td>
+                                <td>{{ meeting.no_of_persons }}</td>
+                                <td>{{ meeting.startdatetime }}</td>
+                                <td>{{ meeting.clientid }}</td>
+                                <td>{{ meeting.status }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-success" type="button" [routerLink]="['/addmeet']">Add a Meeting</button>
+            </div><br>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+

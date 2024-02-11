@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p> Client Info</p>
+                    </div>
+            
+                    <div class="col-md-6" style="text-align: right;">
+                        <a routerLink="/viewall">Back</a>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Client ID</th>
+                        <th>Client Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                       
+                        
+                    </tr>
+                    <tr >
+                    <td>{{clients.id}}</td>
+                    <td>{{clients.clientname}}</td>
+                    <td>{{clients.address}}</td>
+                    <td>{{clients.email}}</td>
+                    <td>{{clients.password}}</td> 
+                    </tr>
+
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

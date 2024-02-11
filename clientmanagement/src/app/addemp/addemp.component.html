@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-light text-dark d-flex justify-content-between align-items-center">
+                    <h3>New Client</h3>
+                    <a routerLink="/viewall" class="btn btn-outline-primary">Back</a>
+                </div>
+                
+                <div class="card-body">
+                    <form #regEmp="ngForm" (ngSubmit)="ClientSaving()" novalidate>
+                        <div class="form-group">
+                            <label for="empid" class="font-weight-bold">Client ID</label>
+                            <input type="text" [(ngModel)]="clients.id" name="empid" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="empName" class="font-weight-bold">Client Name</label>
+                            <input type="text" [(ngModel)]="clients.clientname" name="empName" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="empJob" class="font-weight-bold">Address</label>
+                            <input type="text" [(ngModel)]="clients.address" name="empJob" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="empSal" class="font-weight-bold">Email</label>
+                            <input type="text" [(ngModel)]="clients.email" name="empSal" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="empEmail" class="font-weight-bold">Password</label>
+                            <input type="password" [(ngModel)]="clients.password" name="empEmail" class="form-control" required />
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" [disabled]="!regEmp.valid" class="btn btn-outline-success">Register</button>
+                                <div *ngIf="!regEmp.valid" color="black">Note:All fields are mandatory</div>
+                            </div>
+                        </div>
+                    </form>
+                    <div [innerHTML]="msg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

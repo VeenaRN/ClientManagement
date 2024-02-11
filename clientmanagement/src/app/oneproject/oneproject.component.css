@@ -1,0 +1,41 @@
+.lavenderblush {
+    background-color: lavenderblush;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #f8f9fa; /* light gray */
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 0;
+    color: #212529; 
+}
+
+.table th {
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+.table td {
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    line-height: 1.42857143;
+    border-right: 1px solid #ddd;
+}

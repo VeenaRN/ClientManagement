@@ -1,0 +1,23 @@
+.login-container {
+    background-color:lavenderblush;
+    height: 100vh; 
+}
+
+.login-card {
+    width: 400px; 
+    margin: auto; 
+    margin-top: 50px; 
+    background-color:rgb(201, 179, 201);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.error {
+    color: red; 
+}
+
+.error-msg {
+    color: red; 
+   
+    margin-top: 10px;
+}
+
