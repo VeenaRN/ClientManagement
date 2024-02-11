@@ -18,7 +18,7 @@ navbar2:boolean=false;
     let url=this.router.url;
       console.log(url);
       // if(url=="/login")
-      if (url === "/login" || url=== "/")
+      if (url === "/login" || url=== "/" || url==="/welcome")
       {
         this.navbar1=false;
         this.navbar2=true;
